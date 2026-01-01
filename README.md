@@ -12,14 +12,14 @@ A high-performance, visually stunning, single-page portfolio designed for modern
 - **Dark Mode Contact Section**: A premium, high-contrast footer/contact section with subtle radial glow backgrounds.
 - **Optimized Performance**: Zero build step required—leveraging Tailwind CSS Play CDN and optimized assets.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Frontend**: HTML5, Tailwind CSS, Vanilla JavaScript
 - **Backend (Compatible)**: PHP, MySQL
 - **Design Patterns**: Mobile-First, Responsive Design, Glassmorphism
 - **Iconography**: DevIcon (SVG-based)
 
-## 🔧 Getting Started
+## Getting Started
 
 ### Prerequisites
 
