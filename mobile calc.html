@@ -1,0 +1,188 @@
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input readonly class="Display-input" id="Display2">
+            <div class="Result" id="Result2"></div>
+        </div>
+        <div class="buttons">
+            <button class="function" onclick="clearAll()">C</button>
+            <button class="function" onclick="deleteLast()">⌫</button>
+            <button class="function" onclick="InputButton('%')">%</button>
+            <button class="operator" onclick="InputButton('/')">/</button>
+
+            <button class="number" onclick="InputButton(7)">7</button>
+            <button class="number" onclick="InputButton(8)">8</button>
+            <button class="number" onclick="InputButton(9)">9</button>
+            <button class="operator" onclick="InputButton('*')">×</button>
+
+            <button class="number" onclick="InputButton(4)">4</button>
+            <button class="number" onclick="InputButton(5)">5</button>
+            <button class="number" onclick="InputButton(6)">6</button>
+            <button class="operator" onclick="InputButton('-')">-</button>
+
+            <button class="number" onclick="InputButton(1)">1</button>
+            <button class="number" onclick="InputButton(2)">2</button>
+            <button class="number" onclick="InputButton(3)">3</button>
+            <button class="operator" onclick="InputButton('+')">+</button>
+
+            <button class="number zero" onclick="InputButton(0)">0</button>
+            <button class="number" onclick="InputButton('.')">.</button>
+            <button class="equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f1f5f9;
+        padding: 20px;
+    }
+
+    .calculator {
+        width: 100%;
+        max-width: 400px;
+        background: #222;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .display {
+        background: #333;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: right;
+        min-height: 100px;
+    }
+
+    .Display-input {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        min-height: 24px;
+        background: #333;
+        width: 100%;
+    }
+
+    .Result {
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+
+    button {
+        border: none;
+        padding: 20px;
+        font-size: 1.5rem;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-weight: bold;
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+
+    .number {
+        background: #555;
+        color: white;
+    }
+
+    .operator {
+        background: #ff9500;
+        color: white;
+    }
+
+    .function {
+        background: #a5a5a5;
+        color: black;
+    }
+
+    .equals {
+        background: #ff9500;
+        color: white;
+    }
+
+    .zero {
+        grid-column: span 2;
+    }
+
+    @media (max-width: 480px) {
+        button {
+            padding: 15px;
+            font-size: 1.2rem;
+        }
+
+        .current-operand {
+            font-size: 2rem;
+        }
+    }
+</style>
+<script>//let Display = "";
+    let Result = "0";
+    const DisplayResult = document.getElementById("Result2");
+    DisplayResult.innerHTML = Result;
+
+    let DisplayInput = document.getElementById("Display2");
+    //DisplayInput.innerHTML = DisplayInput;
+
+    function InputButton(input) {
+        DisplayInput.value += input;
+    }
+
+    function deleteLast() {
+        DisplayInput.value = DisplayInput.value.slice(0, -1);
+    }
+
+    function calculate() {
+        if (Result = NaN) {
+            Result = "Error";
+        }
+        else {
+            try {
+                Result = eval(DisplayInput.value);
+            } catch (error) {
+                Result = "Error";
+            } finally { DisplayResult.innerHTML = Result; }
+        }
+    }
+
+    function clearAll() {
+        DisplayInput.value = "";
+        Result = "0";
+        DisplayResult.innerHTML = Result;
+    }</script>
