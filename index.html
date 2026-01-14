@@ -51,7 +51,7 @@
 
   <!-- Header -->
   <header class="fixed w-full top-0 z-50 bg-black backdrop-blur-md shadow-sm transition-all duration-300">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center relative z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <!-- Mobile Layout: Logo + Hamburger -->
       <a href="#home" class="md:hidden text-2xl font-extrabold text-blue-400 tracking-tight logo-link">Dev Meki</a>
 
@@ -90,43 +90,43 @@
         </nav>
       </div>
     </div>
-
-    <!-- Mobile Sidebar Overlay (Off-canvas) -->
-    <div id="mobile-menu-overlay"
-      class="fixed inset-0 bg-black/50 z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-
-    <!-- Mobile Sidebar -->
-    <div id="mobile-menu"
-      class="fixed top-0 right-0 h-full w-64 bg-gray-800 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col pt-6">
-      <!-- Sidebar Header with Close Button -->
-      <div class="flex justify-end px-6 mb-8">
-        <button id="sidebar-close-btn"
-          class="text-gray-400 hover:text-blue-400 transition-colors focus:outline-none p-2" aria-label="Close menu">
-          <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-
-      <ul class="flex flex-col bg-gray-800 space-y-6 px-8 text-left">
-        <li><a href="#home"
-            class="mobile-link text-xl font-bold text-gray-200 hover:text-blue-400 transition-colors block border-b border-gray-700 pb-2">Home</a>
-        </li>
-        <li><a href="#about"
-            class="mobile-link text-xl font-bold text-gray-200 hover:text-blue-400 transition-colors block border-b border-gray-700 pb-2">About</a>
-        </li>
-        <li><a href="#skills"
-            class="mobile-link text-xl font-bold text-gray-200 hover:text-blue-400 transition-colors block border-b border-gray-700 pb-2">Skills</a>
-        </li>
-        <li><a href="#projects"
-            class="mobile-link text-xl font-bold text-gray-200 hover:text-blue-400 transition-colors block border-b border-gray-700 pb-2">Projects</a>
-        </li>
-        <li><a href="#contact"
-            class="mobile-link text-xl font-bold text-gray-200 hover:text-blue-400 transition-colors block border-b border-gray-700 pb-2">Contact</a>
-        </li>
-      </ul>
-    </div>
   </header>
+
+  <!-- Mobile Sidebar Overlay (Off-canvas) -->
+  <div id="mobile-menu-overlay"
+    class="fixed inset-0 bg-black/70 z-[60] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+  <!-- Mobile Sidebar -->
+  <div id="mobile-menu"
+    class="fixed top-0 right-0 h-full w-64 bg-gray-800 shadow-2xl z-[70] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col pt-6">
+    <!-- Sidebar Header with Close Button -->
+    <div class="flex justify-end px-6 mb-8">
+      <button id="sidebar-close-btn" class="text-gray-400 hover:text-blue-400 transition-colors focus:outline-none p-2"
+        aria-label="Close menu">
+        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <ul class="flex flex-col space-y-6 px-8 text-left">
+      <li><a href="#home"
+          class="mobile-link text-xl font-bold text-gray-200 hover:text-blue-400 transition-colors block border-b border-gray-700 pb-2">Home</a>
+      </li>
+      <li><a href="#about"
+          class="mobile-link text-xl font-bold text-gray-200 hover:text-blue-400 transition-colors block border-b border-gray-700 pb-2">About</a>
+      </li>
+      <li><a href="#skills"
+          class="mobile-link text-xl font-bold text-gray-200 hover:text-blue-400 transition-colors block border-b border-gray-700 pb-2">Skills</a>
+      </li>
+      <li><a href="#projects"
+          class="mobile-link text-xl font-bold text-gray-200 hover:text-blue-400 transition-colors block border-b border-gray-700 pb-2">Projects</a>
+      </li>
+      <li><a href="#contact"
+          class="mobile-link text-xl font-bold text-gray-200 hover:text-blue-400 transition-colors block border-b border-gray-700 pb-2">Contact</a>
+      </li>
+    </ul>
+  </div>
 
   <!-- Hero Section -->
   <section id="home"
@@ -316,7 +316,7 @@
   </div>
 
   <!-- About Section -->
-  <section id="about" class="py-16 md:py-24 bg-gray-800">
+  <section id="about" class="py-16 md:py-24 bg-black">
     <div class="container mx-auto px-6">
       <div class="flex flex-col md:flex-row items-center gap-12">
         <div class="md:w-1/2 reveal">
@@ -735,7 +735,7 @@
 
 
   <!-- Projects Section -->
-  <section id="projects" class="py-16 md:py-24 bg-gray-800 relative overflow-hidden">
+  <section id="projects" class="py-16 md:py-24 bg-black relative overflow-hidden">
     <!-- Decorative Elements -->
     <div
       class="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob">
